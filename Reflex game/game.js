@@ -21,7 +21,7 @@
     }
 };
 
-function changeClock() {
+function changeClock() {  //keeps track of how long it takes for the player to click on the box.
     var time= document.getElementById('Timer')
     time.innerHTML = "Time "+count.toFixed(1);
     count += 0.1;
