@@ -1,0 +1,47 @@
+html{
+  background-color: lightgray;
+}
+
+#myCanvas {
+  border-color: black;
+  border-style: solid;
+}
+
+#header {
+  text-align: center;
+  font-size: 30pt;
+  background-color: black;
+  color: white;
+}
+
+#stats {
+  text-align: center;
+  height: 500;
+  width: 650;
+  margin: 0 auto;
+}
+
+#timer {
+  width: 20px;
+  margin: 20px;
+  float: left;
+
+}
+
+#score {
+  width: 20px;
+  margin: 20px;
+  float: left;
+}
+
+#initialize{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-top: 20;
+}
+
+#remainder {
+  margin:10;
+  text-align: center;
+}
