@@ -1,7 +1,7 @@
  function game() {
       if(boxes==0) {
         time.innerHTML="Game Over";
-        if(points > highscore){                 //keeps track of your highest score so player can strive to do better
+        if(points > highscore){                 //keeps track of your highest score so player can strive to do better. Max score possible is 10,000
           highscore=Math.round(points);
           record.innerHTML="High Score: "+highscore;
         }
@@ -13,7 +13,7 @@
       else {
       clock=setInterval(changeClock,100);
       var draw= box.getContext("2d");
-      x= Math.floor(Math.random()*451);
+      x= Math.floor(Math.random()*451); //Random x,y location of the box within the canvas
       y= Math.floor(Math.random()*451);
       boxdim=Math.floor((Math.random()*36) + 15); // randomly generates the boxes dimension
       draw.fillRect(x, y, boxdim, boxdim)
@@ -57,7 +57,7 @@ function getClickPosition(e) {
         boxes-=1;
         count=0;                                                                          //sets timer back to zero
         numofboxes.innerHTML=boxes+" boxes left";
-        clear();
+        clear();   //After the box is clicked, the board is cleared and a new box is generated.
         game();
       }
 };
