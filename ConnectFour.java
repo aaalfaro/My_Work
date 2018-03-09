@@ -13,10 +13,10 @@ import javax.swing.*;
 
 
 public class ConnectFour {
-	private String infosent;
-	private String rev;
-	private JButton button;
-	private JFrame frame;
+    private String infosent;
+    private String rev;
+    private JButton button;
+    private JFrame frame;
     private JPanel mainPanel;
     private JButton[][] buttons;
     private JLabel[][] labels;
@@ -32,7 +32,7 @@ public class ConnectFour {
     {
     	//server LIS=new server();
     	//LIS.start();
-    	turn = true;			//Determines who's turn it is
+    	turn = true;			//Determines who's turn it is. I want the server to keep track of this and currently WIP
         frame = new JFrame("Connect Four");
         mainPanel = new JPanel();
         try {
