@@ -2,12 +2,9 @@
 
 	$connection = mysqli_connect("localhost","andy","password","SmallTalk");
 
-	
 	if(!$connection)
 	{
-
 		echo "Connection Error ".mysqli_connect_error();
-
 	}
 
 	else
@@ -37,32 +34,21 @@
 				$Talk = $connection ->query("Update Students SET Talks= IF(Talks is null, '$smalltalk',concat(Talks,', $smalltalk')) where email = '$email'");
 
 				echo "You are signed in";
-
 			}
 
 			else
 			{
-
 				$PD = $connection ->query("UPDATE Students SET PD = IF(PD is null, 1, PD + 1) WHERE email ='$email'"); //Increment points by 1
 
 				$Talk = $connection ->query("Update Students SET Talks= IF(Talks is null, '$smalltalk',concat(Talks,', $smalltalk')) where email = '$email'");
 
 				echo "You are signed in";
-
 			}
-
 		}
 
-		
 	else
 		{
-
 			echo "You are already signed in";
-
 		}
-
 	}
-
-
-
 ?>
