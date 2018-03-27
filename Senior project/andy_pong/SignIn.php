@@ -8,16 +8,12 @@
 	else
 	{
 		$email = urldecode($_POST['Var2']);
-
 		$smalltalk = urldecode($_POST['Var1']); //The value in the QR code
-
 		//Search for the student in the lecture table to see if he has already signed in.
 		$result = $connection ->query("SELECT email from $smalltalk where email ='$email'"); 
-
 		if( mysqli_num_rows($result) == 0) //Signs the student in if he wasn't found in the table
 		{
 			$Signin = $connection ->query("INSERT INTO $smalltalk(First,Last,email) SELECT Firstname,Lastname,email from Students WHERE email ='$email'");
-
 			if(!$Signin)
 			{
 				echo "This Smalltalk does not exist";
